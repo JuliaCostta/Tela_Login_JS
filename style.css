@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto Slab", serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; 
+	background: url('./img/imag2.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	position: relative;
+}
+
+/* Logotipo na lateral superior esquerda */
+.logo-container {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.logo-img {
+	max-height: 150px;
+}
+
+.container {
+	width: 420px;
+	background: rgba(0, 0, 0, 0.6); /* Fundo escuro para destacar o texto */
+	border: 2px solid rgba(255, 255, 255, .2);
+	border-radius: 10px;
+	color: #fff;
+	padding: 30px 40px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.container h1 {
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.input-box input {
+	width: 100%;
+	height: 50px;
+	background-color: transparent;
+	border: 2px solid rgba(255, 255, 255, .2);
+	border-radius: 40px;
+	font-size: 16px;
+	color: #fff;
+	padding: 0 45px 0 20px;
+}
+
+.input-box input::placeholder {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/* Validação: Borda vermelha se o campo obrigatório for inválido/vazio após submeter */
+.input-box input:invalid:focus {
+	border-color: #ff4d4d;
+	box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+.input-box > i {
+	position: absolute;
+	right: 20px;
+	top: 42px;
+	font-size: 20px;
+	color: #fff;
+}
+
+/* Estilos para o grupo do campo de senha (usando section) */
+.password-container {
+	position: relative;
+	width: 100%;
+}
+
+.toggle-checkbox {
+	display: none;
+}
+
+.input-text {
+	display: none;
+}
+
+.toggle-label {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	cursor: pointer;
+	font-size: 20px;
+	color: #fff;
+	user-select: none;
+}
+
+/* Quando o checkbox do olhinho estiver MARCADO */
+.toggle-checkbox:checked ~ .input-password {
+	display: none;
+}
+
+.toggle-checkbox:checked ~ .input-text {
+	display: block;
+	width: 100%;
+}
+
+.toggle-checkbox:checked ~ .toggle-label .bx-show::before {
+	content: "\ebed"; /* Código do ícone 'bx-hide' */
+}
+
+/* Dica de regra da senha para o aria-describedby */
+.senha-dica {
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.7);
+	margin-left: 15px;
+	margin-top: 5px;
+	display: block;
+}
+
+.remember-forget {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	margin: 15px 0;
+}
+
+.remember-forget a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.remember-forget a:hover {
+	text-decoration: underline;
+}
+
+/* Botão de Entrar */
+.login {
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	border: none;
+	border-radius: 40px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #333;
+	font-weight: 600;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+	transition: 0.3s;
+}
+
+.login:hover {
+	background-color: transparent;
+	border: 2px solid rgba(255, 255, 255, .5);
+	color: #fff;
+}
+
+.create-account {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.create-account a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+.create-account a:hover {
+	text-decoration: underline;
+}
+
+.mensagem-erro {
+    display: block;
+    color: #ff6b6b;
+    font-size: 12px;
+    margin: 5px 12px;
+}
+
+.campo-erro {
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+.mensagem-sucesso {
+    color: #7CFC98;
+    text-align: center;
+    margin: 10px 0;
+}
