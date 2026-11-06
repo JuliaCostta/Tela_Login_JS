@@ -1,8 +1,9 @@
-➜] Tela de Login 2.0
-Visão Geral
-Tela de Login criada em HTML 5 , CSS + JavaScript
+# ➜] Tela de Login
 
-Algumas especificações
+## Visão Geral
+Tela de Login criada em HTML 5 , CSS e JavaScript
+
+## Algumas especificações
 
 O projeto Tela Login foi criado com HTML 5 e CSS. Nesse bloco, irei anotar todas as alterações que eu fiz para implementar o JS nesse projeto.
 - Adcionei um id para <form>;
