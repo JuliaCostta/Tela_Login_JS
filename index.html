@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Tela de Login</title>
+</head>
+<body>		
+	<header class="logo-container">
+		<img src="./img/logo.png" alt="Logotipo da Empresa" class="logo-img">
+	</header>
+
+	<main class="container">
+		<form id= "form-login" novalidate>
+			<h1>Login</h1>
+			
+			<section class="input-box">
+				<label for="usuario">CPF ou E-mail</label><br>
+				<input id="usuario" type="text" placeholder="Digite seu CPF ou E-mail" required>
+				<i class="bx bxs-user"></i>
+				<small id="erro-usuario" class="mensagem-erro"></small>
+			</section>
+			
+			<section class="input-box">
+				<label for="senha">Senha</label><br>
+				<section class="password-container">
+					
+					<input type="checkbox" id="show-password" class="toggle-checkbox">
+
+					
+					<input type="password" id="senha" class="input-password" placeholder="Digite sua senha" required aria-describedby="regra-senha">
+					<input type="text" id="senha-text" class="input-text" placeholder="Digite sua senha" required aria-describedby="regra-senha">
+
+					
+					<label for="show-password" class="toggle-label" aria-label="Mostrar ou ocultar senha">
+						<i class="bx bx-show"></i>
+					</label>
+				</section>
+				</section>
+				<small id="erro-senha" class="mensagem-erro"></small>
+				<small id="regra-senha" class="senha-dica">A senha deve conter no mínimo 8 caracteres</small>
+			</section>
+
+			<section class="remember-forget">
+				<div>
+					<input type="checkbox" id="lembrar">
+					<label for="lembrar">Lembrar senha</label>
+				</div>
+				<br>
+				<a href="recuperar-senha.html">Receber link de acesso por e-mail</a>
+			</section>
+			<br>
+
+			<p id="mensagem-status" role="status" aria-live="polite"></p>
+
+  			<button type="submit" class="login">Entrar</button>
+
+		 	<section class="create-account">
+				<p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+			</section>
+
+		</form>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
